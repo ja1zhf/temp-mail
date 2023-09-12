@@ -1,5 +1,6 @@
 use clipboard::ClipboardContext;
 use clipboard::ClipboardProvider;
+use dialoguer::{theme::ColorfulTheme, Select};
 use serde::Deserialize;
 
 const API: &str = "https://www.1secmail.com/api/v1/";
@@ -59,11 +60,21 @@ impl Email {
     }
 
     pub fn print_messages(&self) {
+        let mut msgs: Vec<String> = Vec::new();
+
         for message in &self.messages {
-            println!(
+            msgs.push(format!(
                 "From: {}\nSubject: {}\nDate: {}\n",
                 message.from, message.subject, message.date
-            );
+            ));
         }
+
+        let selection: usize = Select::with_theme(&ColorfulTheme::default())
+            .default(0)
+            .items(&msgs)
+            .interact()
+            .unwrap();
+
+        println!("{selection}");
     }
 }
