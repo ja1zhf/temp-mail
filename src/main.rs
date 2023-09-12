@@ -1,4 +1,4 @@
-use temp_mail::{Email, GRAY, RESET};
+use tmail::{Email, GRAY, RESET};
 
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn std::error::Error>> {
