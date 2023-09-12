@@ -1,0 +1,11 @@
+[package]
+name = "temp_mail"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+reqwest = { version = "0.11.20", features = ["json"] }
+tokio = { version = "1.32.0", features = ["full"] }
+serde = { version = "1.0.188", features = ["derive"] }
+serde_json = "1.0.106"
+clipboard = "0.5.0"
