@@ -1,12 +1,8 @@
-use temp_mail::Email;
-
-const GRAY: &str = "\x1b[30;1m";
-const RESET: &str = "\x1b[0m";
+use temp_mail::{Email, GRAY, RESET};
 
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn std::error::Error>> {
     let mut email = Email::new().await?;
-    let mut count = 0;
 
     println!(
         "{}{}\n",
@@ -16,9 +12,6 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
 
     loop {
         email.get_messages().await?;
-        if email.messages.len() > count {
-            email.print_messages();
-            count += 1;
-        }
+        email.print_messages().await?;
     }
 }
