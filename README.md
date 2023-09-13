@@ -1,8 +1,7 @@
 # Tmail
 <div style="display: flex; gap: 10px; align-items: start;">
     <img src="./assets/icon.svg" alt="Preview main" width="150" height="150">
-
-    Application for creating temporary email
+    <p>Application for creating temporary email</p>
 </div>
 
 ## Table of contents
