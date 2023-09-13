@@ -26,3 +26,4 @@ or you can download the installer and run it as administrator
 curl https://raw.githubusercontent.com/Ja1z666/temp-mail/main/bin/install.ps1 > install.ps1
 ./install.ps1
 ``` 
+after that just reopen your terminal and type tmail
