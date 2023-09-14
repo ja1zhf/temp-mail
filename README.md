@@ -7,12 +7,14 @@
 ## Table of contents
 * [Preview](#preview)
 * [Installation](#installation)
+  * [Windows](#windows)
 
 ## Preview
 <img src="./assets/preview-main.png" alt="Preview main" width="500"/>
 <img src="./assets/preview-message.png" alt="Preview message" width="500"/>
 
 ## Installation
+### Windows
 You can get started by running this in your terminal as administrator
 ```powershell
 curl https://raw.githubusercontent.com/Ja1z666/temp-mail/main/bin/install.ps1 | pwsh
@@ -26,4 +28,7 @@ or you can download the installer and run it as administrator
 curl https://raw.githubusercontent.com/Ja1z666/temp-mail/main/bin/install.ps1 > install.ps1
 ./install.ps1
 ``` 
-after that just reopen your terminal and type tmail
+after that just reopen your terminal and type
+```
+tmail
+```
